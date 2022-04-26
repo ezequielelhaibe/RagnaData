@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.gridindex{
+    display: grid;
+    grid-column: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 50px 500px 100px;
+    grid-template-areas: "headerindex headerindex headerindex headerindex "
+                        "navegador navegador navegador navegador"
+                        "asideindex  mainindex mainindex mainindex"
+                        "footer  footer footer footer";
+}
+header{
+    grid-area: headerindex;
+    background-image: url(../img/fondoheader.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.navegador{
+    grid-area: navegador;
+    background-color: blue;
+    text-align: center;
+    background-color: rgb(221, 160, 169);
+}
+.navegador ul li{
+    float: left;
+    list-style: none;
+    padding: 15px;
+    border-radius: 15%;
+}
+.asideindex{
+    grid-area: asideindex;
+    background-color:lightpink;
+}
+.mainindex{
+    padding-left: 10px;
+    grid-area: mainindex;
+    background-color: lightpink;
+}
+.mainindex div{
+    margin: 20px 0px;
+}
+.footer{
+    grid-area: footer;
+    background-color: chocolate;
+}
+.asideindex div{
+    margin: 10px 5px;
+    background-color: rgb(185, 98, 127);
+    border-radius: 15px;
+    text-align: center;
+}
+.asideindex div div{
+padding: 10px;
+background-color: rgba(235, 128, 199, 0.411);
+border-radius: 15px;
+}
+.asideindex div ul{
+    list-style: none;
+
+}
