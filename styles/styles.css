@@ -5,17 +5,33 @@
 .gridindex{
     display: grid;
     grid-column: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 50px 500px 100px;
+    grid-template-rows: auto 50px auto auto;
     grid-template-areas: "headerindex headerindex headerindex headerindex "
                         "navegador navegador navegador navegador"
                         "asideindex  mainindex mainindex mainindex"
                         "footer  footer footer footer";
+}
+body{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 header{
     grid-area: headerindex;
     background-image: url(../img/fondoheader.jpg);
     background-position: center;
     background-size: cover;
+}
+header h1{
+    margin: 20px 0 0px 0;
+    float: left;
+    width: auto;
+    background:rgb(255, 255, 255, 0.6);
+}
+header h2{
+    margin: 75px 0 20px 0;
+    background-color: white;
+    float: left;
+    width: 100%;
+    background:rgb(255, 255, 255, 0.6);
 }
 .navegador{
     grid-area: navegador;
@@ -26,7 +42,7 @@ header{
 .navegador ul li{
     float: left;
     list-style: none;
-    padding: 15px;
+    padding: 9px;
     border-radius: 15%;
 }
 .asideindex{
@@ -50,13 +66,25 @@ header{
     background-color: rgb(185, 98, 127);
     border-radius: 15px;
     text-align: center;
+    font-weight: bold;
 }
-.asideindex div div{
-padding: 10px;
-background-color: rgba(235, 128, 199, 0.411);
-border-radius: 15px;
+.asideindex div:hover{
+    background-color: rgb(203, 153, 245);
+    transition: 1s;
 }
 .asideindex div ul{
     list-style: none;
 
 }
+.navegador a{
+    text-decoration: none;
+    font-size: 22px;
+    text-transform: uppercase;
+
+}
+.navegador a:hover{
+    font-size: 25px;
+    transition: 1s;
+    font-weight: bold;
+}
+
